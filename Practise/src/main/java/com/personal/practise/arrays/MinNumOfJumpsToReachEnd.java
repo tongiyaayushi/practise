@@ -1,4 +1,4 @@
-package com.personal.practise;
+package com.personal.practise.arrays;
 
 public class MinNumOfJumpsToReachEnd {
     //Input: arr[] = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9}
