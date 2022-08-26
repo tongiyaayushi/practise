@@ -1,8 +1,18 @@
 package com.personal.practise;
 
+
+
+import com.personal.practise.linkedlist.CloneLLWithNextAndRandomPointer;
+import com.personal.practise.linkedlist.DeleteNodesWithGreaterValueOnRight;
+import com.personal.practise.linkedlist.FlattenBTToLL;
+import com.personal.practise.tree.*;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
+
+import static java.util.Arrays.asList;
 
 public class Practise {
     public static void main(String[] args) {
@@ -105,7 +115,32 @@ public class Practise {
 //        int n =3;
 //        CountSubArray countSubArray = new CountSubArray();
 //        System.out.println(countSubArray.countSubarray(n,a,3,8));
-        byte a=0b0110;
-        System.out.println(a);
+
+       Node root = new Node(1);
+       //root.left = new Node(2);
+//       root.left.left = new Node(4);
+//       root.left.left.left = new Node(6);
+//        root.left.left.right = new Node(7);
+//        root.left.right = new Node(5);
+        root.right = new Node(7);
+        root.right.right = new Node(6);
+        root.right.right.right = new Node(5);
+        root.right.right.right.right = new Node(9);
+        root.right.right.right.right.right = new Node(2);
+
+//        root.right.right = new Node(11);
+//        root.right.right.left = new Node(12);
+//        root.right.right.right = new Node(13);
+//        root.right.left = new Node(10);
+//        FlattenBTToLL flattenBTToLL = new FlattenBTToLL();
+//        flattenBTToLL.traverse(root);
+        /*InorderTraversal traverse = new InorderTraversal();
+        ArrayList list = traverse.inOrder(root);*/
+        HeightOfTree leftView = new HeightOfTree();
+        //System.out.println(leftView.maxDepth(root));
+
+        List<List<String>> collection = asList(asList("Viktor", "Farcic"), asList("John", "Doe", "Third"));
+        List<String> expected = asList("Viktor", "Farcic", "John", "Doe", "Third");
+        List<String> flatMap = leftView.transform(collection);
     }
 }

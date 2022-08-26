@@ -39,20 +39,20 @@ public class ReverseNodesOfLinkedList {
     public Node reverse(int k, Node head){
         int i = 0;
         Node current = head;
-        Node prev = null , next = null;
+        Node arb = null , next = null;
         while ( i <= k ){
             next = current.next;
-            // current.next me prev assign karna h
-            current.next = prev;
-            // current ko prev banana h
-            prev = current;
+            // current.next me arb assign karna h
+            current.next = arb;
+            // current ko arb banana h
+            arb = current;
             // current.next ko current banana h
             current = next;
             i++;
         }
         if (current!=null)
             head.next = current;
-        return prev;
+        return arb;
     }
 
 //    public Node reverseDloublyLinkedList(int k, Node head){
@@ -63,8 +63,8 @@ public class ReverseNodesOfLinkedList {
 //            nextNode = nextNode.next;
 //        }
 //        Node subListToAdjoinNode = nextNode.next;
-//        Node reverseFromNode = nextNode.prev;
-//        nextNode.prev = null;
+//        Node reverseFromNode = nextNode.arb;
+//        nextNode.arb = null;
 //        reverseFromNode.next = null;
 //
 //        Node headNodeNow = reverseFromNode;
@@ -72,10 +72,10 @@ public class ReverseNodesOfLinkedList {
 //        // 1->2->3->4->5
 //        // After first loop 1->2->3->4<-5<-NULL
 //        for (int i=1; i<=k;i++){
-//            Node prev = reverseFromNode.prev;
-//            reverseFromNode.prev = reverseFromNode.next;
-//            reverseFromNode.next = prev;
-//            reverseFromNode = prev;
+//            Node arb = reverseFromNode.arb;
+//            reverseFromNode.arb = reverseFromNode.next;
+//            reverseFromNode.next = arb;
+//            reverseFromNode = arb;
 //        }
 //
 //        // at the end of the loop we will get 1<-2<-3<-4<-5<-NULL
@@ -83,7 +83,7 @@ public class ReverseNodesOfLinkedList {
 //        // NULL->6->7->8->NULL
 //        // 5->4->3->2->1->6->...
 //        reverseFromNode.next = subListToAdjoinNode;
-//        subListToAdjoinNode.prev = reverseFromNode.next;
+//        subListToAdjoinNode.arb = reverseFromNode.next;
 //        return headNodeNow;
 //    }
 }
