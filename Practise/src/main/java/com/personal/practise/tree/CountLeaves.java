@@ -1,5 +1,7 @@
 package com.personal.practise.tree;
 
+import com.personal.practise.Node;
+
 public class CountLeaves {
 
     int countLeaves(Node node)

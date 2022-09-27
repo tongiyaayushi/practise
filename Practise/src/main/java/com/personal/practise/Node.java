@@ -1,15 +1,15 @@
-package com.personal.practise.tree;
+package com.personal.practise;
 
 
 public class Node
 {
-   int data;
-
+   public int data;
+   public Node next;
    public Node left;
    public Node right;
    public Node(int key)
    {
       data = key;
-     left = right = null;
+     next = left = right = null;
    }
 }

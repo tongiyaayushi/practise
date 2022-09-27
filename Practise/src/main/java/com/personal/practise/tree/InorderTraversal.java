@@ -1,9 +1,8 @@
 package com.personal.practise.tree;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import com.personal.practise.tree.Node;
+import com.personal.practise.Node;
 
 public class InorderTraversal {
 

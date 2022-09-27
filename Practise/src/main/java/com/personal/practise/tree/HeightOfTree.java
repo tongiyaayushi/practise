@@ -1,5 +1,7 @@
 package com.personal.practise.tree;
 
+import com.personal.practise.Node;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -18,7 +20,23 @@ public class HeightOfTree {
     }
 
 //    public static Person getOldestPerson(List<Person> people) {
-//        return people.stream().sorted(Comparator.comparing(person -> person.getAge()));
+//        Optional<Person> person = people.stream().max((p1,p2) -> p1.getAge() - p2.getAge());
+//        return person.get();
+//    }
+//
+//    public static int calculate(List<Integer> numbers) {
+//        return numbers.stream().reduce((p1,p2) -> p1+p2).get();
+//    }
+//
+//    public static Set<String> getKidNames(List<Person> people) {
+//        return people.stream().filter(p -> p.getAge() > 18).map(p -> p.getName()).collect(Collectors.toSet());
+//    }
+//
+//    public static Map<Boolean, List<Person>> partitionAdults(List<Person> people) {
+//        Map<Boolean, List<Person>> map = new HashMap<>();
+//        map.put(true, new ArrayList<>());
+//        map.put(false, new ArrayList<>());
+//        return people.stream().collect(Collectors.partitioningBy(p -> p.getAge() >= 18));
 //    }
 
     int height(Node node)

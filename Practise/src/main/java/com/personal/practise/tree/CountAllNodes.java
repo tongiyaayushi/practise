@@ -1,5 +1,7 @@
 package com.personal.practise.tree;
 
+import com.personal.practise.Node;
+
 public class CountAllNodes {
 
     public static int getSize(Node root)

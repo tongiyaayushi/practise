@@ -1,7 +1,6 @@
 package com.personal.practise.tree;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import com.personal.practise.Node;
 
 public class MirrorTree {
 

@@ -1,7 +1,9 @@
 package com.personal.practise.arrays;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 public class MajorityElement {
     int majorityElement(int a[], int size)
@@ -40,6 +42,12 @@ public class MajorityElement {
                     return entry.getKey();
                 }
             }
+        }
+
+        Set<Map.Entry<Integer,Integer>> entries = countMap.entrySet();
+        Iterator<Integer> itr = countMap.values().iterator();//keySet().iterator();
+        while (itr.hasNext()){
+            int key= itr.next();
         }
         return -1;
     }

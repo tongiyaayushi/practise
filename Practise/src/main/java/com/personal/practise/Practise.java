@@ -2,17 +2,14 @@ package com.personal.practise;
 
 
 
-import com.personal.practise.linkedlist.CloneLLWithNextAndRandomPointer;
-import com.personal.practise.linkedlist.DeleteNodesWithGreaterValueOnRight;
-import com.personal.practise.linkedlist.FlattenBTToLL;
+import com.personal.practise.arrays.BicycleParkingSlots;
+import com.personal.practise.arrays.FindSmallestPositiveMissingNumer;
+import com.personal.practise.arrays.GroupingOfAnagrams;
+import com.personal.practise.queue.*;
+import com.personal.practise.stack.*;
 import com.personal.practise.tree.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
-
-import static java.util.Arrays.asList;
 
 public class Practise {
     public static void main(String[] args) {
@@ -117,30 +114,161 @@ public class Practise {
 //        System.out.println(countSubArray.countSubarray(n,a,3,8));
 
        Node root = new Node(1);
-       //root.left = new Node(2);
-//       root.left.left = new Node(4);
-//       root.left.left.left = new Node(6);
-//        root.left.left.right = new Node(7);
-//        root.left.right = new Node(5);
-        root.right = new Node(7);
+       root.left = new Node(2);
+       root.left.left = new Node(4);
+       //root.left.left.left = new Node(6);
+       //root.left.left.right = new Node(7);
+        root.left.right = new Node(5);
+        root.left.right.left = new Node(7);
+        root.left.right.right = new Node(8);
+//        root.left.right.left.left.left = new Node(13);
+        root.right = new Node(3);
         root.right.right = new Node(6);
-        root.right.right.right = new Node(5);
-        root.right.right.right.right = new Node(9);
-        root.right.right.right.right.right = new Node(2);
+        root.right.right.right = new Node(9);
+        root.right.right.right.right = new Node(10);
+        //root.right.right = new Node(6);
+        //root.right.right.right = new Node(5);
+//        root.right.right.right.right = new Node(9);
+//        root.right.right.right.right.right = new Node(2);
 
 //        root.right.right = new Node(11);
 //        root.right.right.left = new Node(12);
-//        root.right.right.right = new Node(13);
-//        root.right.left = new Node(10);
+////        root.right.right.right = new Node(13);
+//       root.right.left = new Node(3);
+//        root.right.left.right = new Node(6);
+//        root.right.left.right.left = new Node(4);
+//        root.right.left.right.right = new Node(9);
 //        FlattenBTToLL flattenBTToLL = new FlattenBTToLL();
 //        flattenBTToLL.traverse(root);
         /*InorderTraversal traverse = new InorderTraversal();
         ArrayList list = traverse.inOrder(root);*/
-        HeightOfTree leftView = new HeightOfTree();
+        //HeightOfTree leftView = new HeightOfTree();
         //System.out.println(leftView.maxDepth(root));
 
-        List<List<String>> collection = asList(asList("Viktor", "Farcic"), asList("John", "Doe", "Third"));
-        List<String> expected = asList("Viktor", "Farcic", "John", "Doe", "Third");
-        List<String> flatMap = leftView.transform(collection);
+//        TopView topView = new TopView();
+////        ArrayList list = topView.topView(root);
+//        LowestCommonAncestor ancestor = new LowestCommonAncestor();
+//        Node minNode = ancestor.lca(root,4, 9);
+
+//        BoundaryTraversal boundaryTraversal = new BoundaryTraversal();
+//        List<Integer> arrayList = boundaryTraversal.boundary(root);
+
+//        int in[] = {4, 8, 2, 5, 1, 6, 3, 7};
+//        int post[] = {8, 4, 5, 2, 6, 7, 3, 1};
+//        TreeFromPreOrderAndInOrderTraversal orderTraversal = new TreeFromPreOrderAndInOrderTraversal();
+//        orderTraversal.buildTree(in,post,8);
+
+//         PreOrderTraversalIterative iterative = new PreOrderTraversalIterative();
+//         Node rootNode = iterative.buildTree("8 1 5 N 7 10 6 N 10 6");
+//         ArrayList<Integer> list = iterative.preOrder(rootNode);
+
+//        ShortestPathBetweenCities shortestPath = new ShortestPathBetweenCities();
+//        shortestPath.shortestPath(2,6);
+//
+//        BurningTree burn = new BurningTree();
+//        System.out.println(burn.minTime(root, 7));
+        Node ll= new Node(1);
+        ll.next = new Node(2);
+        ll.next.next = new Node(3);
+        ll.next.next.next = new Node(4);
+        ll.next.next.next.next = new Node(5);
+        ll.next.next.next.next.next = new Node(6);
+        ll.next.next.next.next.next.next = new Node(7);
+
+//        SortedListToBST llToBST = new SortedListToBST();
+//        Node node = llToBST.sortedListToBST(ll);
+
+//        NodesAtKDistanceinBT kDistanceinBT = new NodesAtKDistanceinBT();
+//        List<Integer> list = kDistanceinBT.KDistanceNodes(root,5,2);
+//
+//        LevelOrderTraversalInSpiralForm spiral = new LevelOrderTraversalInSpiralForm();
+//        List<Integer> list1 = spiral.findSpiral(root);
+
+//        StackQueue queue = new StackQueue();
+//        queue.Push(1);
+//        queue.Push(2);
+//        queue.Push(3);
+//        queue.Push(4);
+//        System.out.println(queue.Pop());
+//        System.out.println(queue.Pop());
+//        System.out.println(queue.Pop());
+//        System.out.println(queue.Pop());
+//        System.out.println(queue.Pop());
+
+//     int[][] M = {{0,1,0},{0,0,0},{0,1,0}};
+//     TheCelebrityProblem celebrityProblem = new TheCelebrityProblem();
+//     celebrityProblem.celebrity(M, 3);
+
+//        int price[] = {100 ,80, 60, 70, 60, 75, 85};
+//        StockSpanProblem span = new StockSpanProblem();
+//        int[] spanning = span.calculateSpan(price, 7);
+
+//        ValidParanthesisString checkValid = new ValidParanthesisString();
+//        System.out.println(checkValid.checkValidStringAgain("(())*(()"));
+
+//        LongestValidParanthesis maxLength = new LongestValidParanthesis();
+//        System.out.println(maxLength.maxLength("((((())))()()(()((()((((()((()()))((((((())((((())(()))((()))(()()()))(()()))(((())((())))))(()()(())(())()()()())((((())()((()())()()(((()(())((())(()()()()())((()()()()()))(((())))((())((()))())(())()()))(()()))(((()()(()())(())(())()(((()(()(())((())(())(()()((((()))()))((((()))))))))(())((())))))(()))(((()(()(()((()(((())()))()(()((())((())()())()()())))()((((())))))(()()))()(()))))))(()))(((()(()()))()()()(()((((())((()))()()))()()())))((()))(())(((()(())((()()))))))(((((((()()()((())()())))(()((((())))(())(()((((((()()))(())((()))))()))(()))))(((()()))((())))))())()))))())()()())())(((()))))(())())((()())(((((((()(((((((())))))((()(((())((())))((())())()))))())((()(()))()))))(())))))())()(())((())())()(()()(()))))()))(()(((()(()()((()()))(()(())))(((()()((((()()())))()()(((((()))((()()))(()))())()())(((())))(())))))))))()))())())((())((()))))))))(()()(())()(()(((((())())(()((())(()))())()()()()))()((())()))))))()))()(()())())((((()((((()))))())((())())((()))(((((())))))))((()))((((()))))(()))(((()()))))(()((())))())((((()()()(()())))(())()(()()(())(((()()())())()))())))()())))))((())))()))))())()(()(())(()(())(()((())()))(())((((())()()()))()))(()(())((((()((()(((()((()())(((((())((())()()((((((())))(())))((((())()())))()()())()))(())()(((()(((()(((((((()((())((()(()())))(()()()((())()()(()(()()(((((((((()(())))))()(((())))()(()))((()((())())()((()())())((()(())()()())())(())((())(()))(())((()())))))))()))((((())))(()()()((((()(())(()((())))())(((((()()((()((((())(())))))())()()((()()((()))((())))))))))))())((()))((())()()(())())))()((((()()((())))))))))(()(()()(((())))((())(()(())(()()))()(()))()(())))()()(((((()())())((((())(()(()()(())))((())()(()))))()))()()((())())((()((())))))))()((((()))()))))))()())())))()()()))(())(()()(()()))))))())))()(())(()())(())))())))())))())))))()()))()()))()(((())())(())))))()())((()(()))))(()(()())())())()((())))((()(())))(())))())(())((()(())))()()))))()())(()))())()((())(())(())(()(((((()(((((()(((((())(()(())))(()))(()))((((()))))))(())()((()(((())()))((())))))()()()(((()()()(()(()(()(()())(())(()((()(()((())))))()()))))((((()))(()())))())))))((()(())))((((((((()(()())()()))(()))())(())((()))))()(()()(()))))))((())()()(((((()()))()())()))((())))())()()((()))))())))()((()(()()(())(((())(()(()(()(()))))(())(()()((()((()))))(()())(()))))(()(()))((())))()))()()(((((((()((()()))(((((()()(())((()()()))(((((((()()))))))(())))()()(()(((()))))(()(()(()()(()()))))()()))()(()))(((()()((()))())()()))))()()(()))((()()))()))))(()(()((()((()((()))())()((((((()()(()()))(()))(()()))((())((())()()))()))(((()))))))((((())()))())()()()()(()(()(())()())((()()))()(((((()))(()))()((()((()(()(()()(()))))))(()))((()()((())((((((()(()))()())()((())((())()()())))()(())(())()()(())()(((()))()(((()(()))))())((())))((())()((()()()(()))(()(())()((())())(((())(()()(()))((((()()()()(())(((()())))((((())(()())()(((((())(())(()()()))))(()((()()()())()()((()(())()))()(((()()()())())))(()()())))))())(((()()))()((((())()))))()(()(((())()()))))((())))))))(())()()()())(()(()())())())(()))))(())))()))()()(()()((((())((((())()()(()((((()))()()()((()))()))(((())))((((((()())))(((()())))((((()((()))(((()(())))(()(()()()()(((((((()(((()))))))()(())(()))()()(())(((())()))))()())(()())()((()(())(((()(()))))()(()())(())((())((())))()(()()((()()((()((()))("));
+
+//        int arr[] = {1,2,3,1,4,5,2,3,6};
+//        MaxOfAllSubArrayOfSizeK max = new MaxOfAllSubArrayOfSizeK();
+//        List<Integer> list = max.printMax(arr,9,3);
+
+        /*NumberOfUniquePaths uniquePaths = new NumberOfUniquePaths();
+        System.out.println(uniquePaths.NumberOfPathIterative(3,4));*/
+
+//        int arr[] = {10,20,30,50,10,70,30};
+//        MaxOfMinimumsOfEveryWindowSize maxOfMinimumsOfEveryWindowSize = new MaxOfMinimumsOfEveryWindowSize();
+//        int result[] = maxOfMinimumsOfEveryWindowSize.maxOfMinOptimizea(arr,7);
+
+//        ImplementStackUsing2Queues stack = new ImplementStackUsing2Queues();
+//        System.out.println(stack.pop());;
+//        stack.push(1);
+//        stack.push(2);
+//        stack.push(3);
+//        System.out.println(stack.pop());
+
+//        long[] arr = {4, 2, 7, 6, 9};
+//        MInimumCostOfRopes ropes = new MInimumCostOfRopes();
+//        System.out.println(ropes.minCost(arr, 5));
+//        long A[] = {12, -1, -7, 8, -15, 30, 16, 28};
+//        FirstNegativeIntInWndowOfSizeK m = new FirstNegativeIntInWndowOfSizeK();
+//        long[] result = m.printFirstNegativeInteger(A, 8, 3);
+
+//        String words[] = {"act","god","cat","dog","tac"};
+//        GroupingOfAnagrams anagrams = new GroupingOfAnagrams();
+//        List<List<String>> list = anagrams.generateAnagrams(words);
+
+//        int arr[] = {0,-10,1,3,-20};
+//        FindSmallestPositiveMissingNumer missingNumer = new FindSmallestPositiveMissingNumer();
+//        System.out.println(missingNumer.missingNumber(arr, 5));
+
+
+//        int[] Petrol = {55, 52, 33, 100};
+//        int[] Distance = {77, 61, 40, 69};
+//        CircularTour tour = new CircularTour();
+//        System.out.println(tour.tourOptimized(Petrol, Distance));
+
+//        LRUCache.get(100);
+//        LRUCache.get(26);
+//        LRUCache.get(91);
+//        LRUCache.set( 55, 40);
+//        LRUCache.get(70);
+//        LRUCache.get(43);
+//        LRUCache.get(98);
+//        LRUCache.set( 5, 56);
+//        LRUCache.get(12);
+//        LRUCache.get(29);
+//        LRUCache.set(47, 44);
+
+//     int[] Petrol = {10, 0, 8, 2, -1, 12, 11, 3};
+//     BicycleParkingSlots parkingSlots = new BicycleParkingSlots();
+//     System.out.println(parkingSlots.solution(Petrol));;
+
+//        FirstNonRepeatingCharacterStream nonRepeatingCharacterStream = new FirstNonRepeatingCharacterStream();
+//        System.out.println(nonRepeatingCharacterStream.FirstNonRepeating("zz"));;
+        int[][] grid = {{0,1,2},{0,1,2},{2,1,1},{1,1,1}};
+        RottenOranges rottenOranges = new RottenOranges();
+        System.out.println(rottenOranges.orangesRotting(grid));
+
     }
 }

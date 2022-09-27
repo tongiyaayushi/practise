@@ -1,5 +1,7 @@
 package com.personal.practise.tree;
 
+import com.personal.practise.Node;
+
 import java.util.ArrayList;
 
 public class PreorderTraversal {

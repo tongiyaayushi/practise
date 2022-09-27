@@ -1,8 +1,6 @@
 package com.personal.practise.tree;
 
-import javax.swing.*;
-import java.util.ArrayList;
-import java.util.List;
+import com.personal.practise.Node;
 
 public class CheckBST {
 
